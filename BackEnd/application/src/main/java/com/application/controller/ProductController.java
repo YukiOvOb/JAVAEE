@@ -37,7 +37,7 @@ public class ProductController {
         String category = request.get("category");
         System.out.println(category);
         List<Product> products = productService.findByCategory(category);
-        System.out.println("查询结果: " + products);
+        System.out.println("Search Result: " + products);
         if (products != null && !products.isEmpty()) {
             return Result.success(products);
         } else {
