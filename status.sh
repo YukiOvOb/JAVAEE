@@ -1,7 +1,19 @@
 #!/bin/bash
 # filepath: /root/JAVAEE/status.sh
 
-echo "📊 Git Repository Status Report | Git仓库状态报告"
+eelse
+    echo "$unpushed"
+fi
+
+echo "==========================================="
+echo ""
+echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+while true; do
+    read -rsn1 key
+    if [ "$key" = " " ]; then
+        break
+    fi
+done📊 Git Repository Status Report | Git仓库状态报告"
 
 # Set color output | 设置颜色输出
 GREEN='\033[0;32m'

@@ -39,8 +39,7 @@ if git remote | grep -q "origin"; then
     git remote -v
 else
     echo "🌐 Adding remote repository... | 添加远程仓库..."
-    read -p "Enter remote repository URL | 请输入远程仓库URL (e.g., https://github.com/username/repo.git): " repo_url
-    git remote add origin "$repo_url"
+    git remote add origin "https://github.com/YukiOvOb/JAVAEE.git"
     echo -e "${GREEN}✅ Remote repository added successfully | 远程仓库添加完成${NC}"
 fi
 
@@ -97,3 +96,11 @@ echo "Now you can use the following scripts for daily operations | 现在你可�
 echo "  - ./commit-push.sh : Commit and push code | 提交并推送代码"
 echo "  - ./pull.sh : Pull latest code | 拉取最新代码"
 echo "  - ./status.sh : Check repository status | 查看仓库状态"
+echo ""
+echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+while true; do
+    read -rsn1 key
+    if [ "$key" = " " ]; then
+        break
+    fi
+done

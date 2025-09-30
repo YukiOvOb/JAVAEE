@@ -73,11 +73,33 @@ if [ $? -eq 0 ]; then
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}🎉 Push successful! | 推送成功！${NC}"
         echo "🌐 View repository | 查看仓库: $(git remote get-url origin)"
+        echo ""
+        echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+        while true; do
+            read -rsn1 key
+            if [ "$key" = " " ]; then
+                break
+            fi
+        done
     else
         echo -e "${RED}❌ Push failed | 推送失败${NC}"
+        echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+        while true; do
+            read -rsn1 key
+            if [ "$key" = " " ]; then
+                break
+            fi
+        done
         exit 1
     fi
 else
     echo -e "${RED}❌ Commit failed | 提交失败${NC}"
+    echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+    while true; do
+        read -rsn1 key
+        if [ "$key" = " dash" ]; then
+            break
+        fi
+    done
     exit 1
 fi
