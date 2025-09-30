@@ -26,10 +26,10 @@ echo "🌟 Example Usage | 使用示例："
 echo "  ./commit-push.sh \"Add new features\"   # With commit message | 带提交信息"
 echo "  ./commit-push.sh                       # Interactive mode | 交互模式"
 echo ""
-echo -e "\033[1;33mPress SPACE to exit... | 按空格键退出...\033[0m"
+echo -e "\033[1;33mPress SPACE or ENTER to exit... | 按空格键或回车键退出...\033[0m"
 while true; do
     read -rsn1 key
-    if [ "$key" = " " ]; then
+    if [ "$key" = " " ] || [ "$key" = "" ]; then
         break
     fi
 done
