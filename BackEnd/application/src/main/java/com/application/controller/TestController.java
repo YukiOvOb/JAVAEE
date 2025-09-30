@@ -15,7 +15,7 @@ public class TestController {
     @Autowired
     private TestService testService;
     
-    // get all tests
+    // 获取所有测试项
     @GetMapping
     public List<Test> getAllTests() {
         return testService.getAllTests();
