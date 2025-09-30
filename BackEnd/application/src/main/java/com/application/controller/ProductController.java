@@ -53,7 +53,7 @@ public class ProductController {
             List<Product> products = productService.findByName(name);
             // System.out.println("findByNameResult: " + (products != null ? products.size()
             // : 0) + "
-            // 条");
+            // ");
             if (products != null && !products.isEmpty()) {
                 return Result.success(products);
             } else {
