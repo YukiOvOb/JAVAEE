@@ -14,10 +14,9 @@ import java.util.Map;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-
 @RestController
-@CrossOrigin  
-@RequestMapping("/api/products") 
+@CrossOrigin
+@RequestMapping("/api/products")
 public class ProductController {
     @Autowired
     private ProductService productService;
@@ -38,7 +37,7 @@ public class ProductController {
         String category = request.get("category");
         System.out.println(category);
         List<Product> products = productService.findByCategory(category);
-        System.out.println("查询结果: " + products);
+        System.out.println("Search Result: " + products);
         if (products != null && !products.isEmpty()) {
             return Result.success(products);
         } else {
@@ -49,10 +48,12 @@ public class ProductController {
     @PostMapping("/productsfindbyname")
     public Result<List<Product>> findByName(@RequestBody Map<String, String> request) {
         String name = request.get("name");
-        // System.out.println("接收到name: " + name);
+        // System.out.println("ReceivedName: " + name);
         try {
             List<Product> products = productService.findByName(name);
-            // System.out.println("按名称查询结果: " + (products != null ? products.size() : 0) + " 条");
+            // System.out.println("findByNameResult: " + (products != null ? products.size()
+            // : 0) + "
+            // ");
             if (products != null && !products.isEmpty()) {
                 return Result.success(products);
             } else {
@@ -84,7 +85,7 @@ public class ProductController {
 
     @PostMapping("productchange")
     public Result<Product> productchange(@RequestBody Map<String, Object> request) {
-        Product entity = new Product(); 
+        Product entity = new Product();
         entity.setId((Integer) request.get("id"));
         entity.setName((String) request.get("name"));
         entity.setCategory((String) request.get("category"));
@@ -101,8 +102,5 @@ public class ProductController {
         entity = productService.createProduct(entity);
         return Result.success("Product created successfully", entity);
     }
-    
-    
 
-    
 }
