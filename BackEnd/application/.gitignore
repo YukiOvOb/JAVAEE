@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+#ignore personal DB login and password
+#src/main/resources/application-local.properties
