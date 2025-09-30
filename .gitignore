@@ -1,0 +1,40 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Java
+*.class
+target/
+*.jar
+*.war
+
+# Spring Boot
+application-*.properties
+application-*.yml
+
+# Database
+*.db
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
