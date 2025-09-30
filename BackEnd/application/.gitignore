@@ -33,4 +33,4 @@ build/
 .vscode/
 
 #ignore personal DB login and password
-#src/main/resources/application-local.properties
+src/main/resources/application-local.properties
