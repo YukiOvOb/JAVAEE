@@ -42,7 +42,22 @@ if [ $? -eq 0 ]; then
     # Show latest commits | 显示最新的提交
     echo -e "${GREEN}📋 Latest commits | 最新提交：${NC}"
     git log --oneline -5
+    echo ""
+    echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+    while true; do
+        read -rsn1 key
+        if [ "$key" = " " ]; then
+            break
+        fi
+    done
 else
     echo -e "${RED}❌ Pull failed | 拉取失败${NC}"
+    echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+    while true; do
+        read -rsn1 key
+        if [ "$key" = " " ]; then
+            break
+        fi
+    done
     exit 1
 fi

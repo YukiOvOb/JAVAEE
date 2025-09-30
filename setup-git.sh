@@ -97,3 +97,11 @@ echo "Now you can use the following scripts for daily operations | 现在你可�
 echo "  - ./commit-push.sh : Commit and push code | 提交并推送代码"
 echo "  - ./pull.sh : Pull latest code | 拉取最新代码"
 echo "  - ./status.sh : Check repository status | 查看仓库状态"
+echo ""
+echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+while true; do
+    read -rsn1 key
+    if [ "$key" = " " ]; then
+        break
+    fi
+done
