@@ -39,8 +39,7 @@ if git remote | grep -q "origin"; then
     git remote -v
 else
     echo "🌐 Adding remote repository... | 添加远程仓库..."
-    read -p "Enter remote repository URL | 请输入远程仓库URL (e.g., https://github.com/username/repo.git): " repo_url
-    git remote add origin "$repo_url"
+    git remote add origin "https://github.com/YukiOvOb/JAVAEE.git"
     echo -e "${GREEN}✅ Remote repository added successfully | 远程仓库添加完成${NC}"
 fi
 

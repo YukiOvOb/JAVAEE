@@ -97,7 +97,7 @@ else
     echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
     while true; do
         read -rsn1 key
-        if [ "$key" = " " ]; then
+        if [ "$key" = " dash" ]; then
             break
         fi
     done
