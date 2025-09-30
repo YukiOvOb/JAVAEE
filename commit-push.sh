@@ -83,10 +83,10 @@ if [ $? -eq 0 ]; then
         done
     else
         echo -e "${RED}❌ Push failed | 推送失败${NC}"
-        echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+        echo -e "${YELLOW}Press SPACE or ENTER to exit... | 按空格键或回车键退出...${NC}"
         while true; do
             read -rsn1 key
-            if [ "$key" = " " ]; then
+            if [ "$key" = " " ] || [ "$key" = "" ]; then
                 break
             fi
         done
@@ -94,10 +94,10 @@ if [ $? -eq 0 ]; then
     fi
 else
     echo -e "${RED}❌ Commit failed | 提交失败${NC}"
-    echo -e "${YELLOW}Press SPACE to exit... | 按空格键退出...${NC}"
+    echo -e "${YELLOW}Press SPACE or ENTER to exit... | 按空格键或回车键退出...${NC}"
     while true; do
         read -rsn1 key
-        if [ "$key" = " dash" ]; then
+        if [ "$key" = " " ] || [ "$key" = "" ]; then
             break
         fi
     done
