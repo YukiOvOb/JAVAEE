@@ -12,3 +12,6 @@ For github
 # Quick commit without message | 快速提交（无需输入信息）
 ./commit-push.sh
 # Script will prompt for message or use default | 脚本会提示输入信息或使用默认值
+
+Start SQL
+sudo service mysql start

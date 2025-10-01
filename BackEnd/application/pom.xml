@@ -31,11 +31,24 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         
-        <!-- Thymeleaf 模板引擎
+        <!-- Thymeleaf 模板引擎 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency> -->
+        </dependency>
+
+        <!-- Email support | 邮件支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <!-- Or use Jakarta Mail directly | 或直接使用Jakarta Mail -->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>2.0.1</version>
+        </dependency>
         
         <!-- MySQL 驱动 -->
         <dependency>
