@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <style>
+        table{border-collapse:collapse;width:100%} td,th{border:1px solid #eee;padding:8px}
+        img{width:80px;height:80px;object-fit:cover;border-radius:6px}
+        .price{color:#d43;font-weight:bold}
+    </style>
+</head>
+<body>
+<a th:href="@{/}">← Back to Home</a>
+<h2>Cart</h2>
+<table>
+    <thead><tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th>Actions</th></tr></thead>
+    <tbody>
+    <tr th:each="it: ${items}">
+        <td>
+            <img th:src="${it.imageUrl}" alt=""/>
+            <div><a th:href="@{/product/{h}(h=${it.handle})}" th:text="${it.title}"></a></div>
+        </td>
+        <td class="price" th:text="${it.price}"></td>
+        <td>
+            <form th:action="@{/cart/update/{h}(h=${it.handle})}" method="post">
+                <input type="number" name="qty" th:value="${it.qty}" min="1" style="width:80px"/>
+                <button type="submit">Update</button>
+            </form>
+        </td>
+        <td class="price" th:text="${it.subtotal}"></td>
+        <td>
+            <form th:action="@{/cart/remove/{h}(h=${it.handle})}" method="post">
+                <button type="submit">Remove</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h3>Total: <span class="price" th:text="${total}"></span></h3>
+</body>
+</html>
