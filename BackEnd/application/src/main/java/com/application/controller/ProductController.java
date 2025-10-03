@@ -83,24 +83,24 @@ public class ProductController {
         return Result.success("Product deleted successfully");
     }
 
-    @PostMapping("productchange")
-    public Result<Product> productchange(@RequestBody Map<String, Object> request) {
-        Product entity = new Product();
-        entity.setId((Integer) request.get("id"));
-        entity.setName((String) request.get("name"));
-        entity.setCategory((String) request.get("category"));
-        entity = productService.updateProduct(entity);
-        return Result.success("Product updated successfully", entity);
-    }
+    // @PostMapping("productchange")
+    // public Result<Product> productchange(@RequestBody Map<String, Object> request) {
+    //     Product entity = new Product();
+    //     entity.setId((Integer) request.get("id"));
+    //     entity.setName((String) request.get("name"));
+    //     entity.setCategory((String) request.get("category"));
+    //     entity = productService.updateProduct(entity);
+    //     return Result.success("Product updated successfully", entity);
+    // }
 
-    @PostMapping("productcreate")
-    public Result<Product> productcreate(@RequestBody Map<String, Object> request) {
-        Product entity = new Product();
-        entity.setName((String) request.get("name"));
-        entity.setCategory((String) request.get("category"));
-        entity.setDescription((String) request.get("description"));
-        entity = productService.createProduct(entity);
-        return Result.success("Product created successfully", entity);
-    }
+    // @PostMapping("productcreate")
+    // public Result<Product> productcreate(@RequestBody Map<String, Object> request) {
+    //     Product entity = new Product();
+    //     entity.setName((String) request.get("name"));
+    //     entity.setCategory((String) request.get("category"));
+    //     entity.setDescription((String) request.get("description"));
+    //     entity = productService.createProduct(entity);
+    //     return Result.success("Product created successfully", entity);
+    // }
 
 }

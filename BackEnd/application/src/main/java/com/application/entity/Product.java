@@ -39,5 +39,9 @@ public class Product {
     private String collection;
     @Column(name = "stock", nullable = false)
     private int stock;
+
+    private String name;
+
+    
 }
 // testing pls ignore this 

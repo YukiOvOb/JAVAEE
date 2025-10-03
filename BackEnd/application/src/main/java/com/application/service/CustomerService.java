@@ -35,4 +35,8 @@ public class CustomerService {
         return 1;
     }
 
+    public Customer updateCustomer(Customer customer) {
+        return customerDAO.save(customer);
+    }
+
 }

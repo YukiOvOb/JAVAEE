@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductManagement from './pages/ProductManagement';
 import CreateProduct from './pages/CreateProduct';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import UserProfile from './pages/UserProfile';
 import './App.css';
 
 function App() {
@@ -32,6 +36,10 @@ function App() {
         {/* 主要内容区域 */}
         <main className="main-content">
           <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/profile" element={<UserProfile />} />
             <Route path="/" element={<ProductManagement />} />
             <Route path="/products" element={<ProductManagement />} />
             <Route path="/create" element={<CreateProduct />} />
