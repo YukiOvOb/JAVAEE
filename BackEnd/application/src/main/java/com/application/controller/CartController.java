@@ -47,7 +47,7 @@ public class CartController {
             if (p == null) continue;
             BigDecimal subtotal = p.getPrice() == null ? BigDecimal.ZERO : p.getPrice().multiply(BigDecimal.valueOf(e.getValue()));
             total = total.add(subtotal);
-            items.add(new ItemView(p.getHandle(), p.getTitle(), p.getImageUrl(), p.getPrice(), e.getValue(), subtotal));
+            items.add(new ItemView(p.getHandle(), p.getName(), p.getImageUrl(), p.getPrice(), e.getValue(), subtotal));
         }
         model.addAttribute("items", items);
         model.addAttribute("total", total);

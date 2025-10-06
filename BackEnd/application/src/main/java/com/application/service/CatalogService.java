@@ -40,7 +40,7 @@ public class CatalogService {
             for (CSVRecord rec : p) {
                 Product prod = new Product();
                 prod.setHandle(s(rec, "handle"));
-                prod.setTitle(s(rec, "title"));
+                prod.setName(s(rec, "name"));
                 prod.setDescription(s(rec, "description"));
                 prod.setImageUrl(s(rec, "image_url"));
                 prod.setBrand(s(rec, "brand"));
