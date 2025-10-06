@@ -24,6 +24,8 @@ public class HomeController {
         if (p == null) return "redirect:/";
         model.addAttribute("product", p);
         model.addAttribute("images", catalog.imagesByHandle(handle));
+        model.addAttribute("inStock", p.getStock() > 0);
+        model.addAttribute("stockStatus", p.getStock() > 0 ? "In Stock" : "Out of Stock");
         return "product";
     }
 }

@@ -17,27 +17,17 @@ public class Product {
     private int id;
 
     private String name;
+    private String description;
+    private String imageUrl;
+    private String imageAlt;
+    private Double unitPrice;
+    private String brand;
+    private String category;
+    private String collection;
+    private int stock;
 
     // handle can also be used as a unique identifier
     private String handle;
-
-    // private String title;
-
-    private String description;
-
-    private String imageUrl;
-
-    private String imageAlt;
-
+    // private String title;   replaced by name
     private BigDecimal price;
-
-    private Double unitPrice;
-
-    private String brand;
-
-    private String category;
-
-    private String collection;
-
-    private int stock;
 } 
